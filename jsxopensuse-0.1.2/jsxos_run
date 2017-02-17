@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo docker run -v $PWD:/rendu/ -ti jsxopensuse runner $*
+

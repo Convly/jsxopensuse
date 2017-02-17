@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nano ~/.jsxopensuse/runner.sh
+docker build -t jsxopensuse ~/.jsxopensuse
