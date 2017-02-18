@@ -47,7 +47,7 @@ sudo jsxos_run [ARG1, ARG2, ...]
 *The following command will start your docker container and send it all the arguments you gave to it.*
 
 
-In order to make our previous runner working, go to the directory of one of your project (*obviously compiling with a make re*) ; then do execute the following command:
+In order to make our previous runner working, go to the directory of one of your project (obviously compiling with a make re) ; then execute the following command:
 ``` sh
 sudo jsxos_run <BINARY_NAME>
 ```
@@ -65,5 +65,6 @@ The _**--update**_ flag will automatically rebuilt your container with the updat
 1. "update script" in order to do not have to reconfigure all the scripts and packages at each minor/major update.
 2. Make a flag to launch the container in "_**daemon mode**_", which will allow to execute manual commands after the execution of the runner.
 3. Add multiples flags to handle tons of minor but useful features.
+
 ---
 ###### __JSX__ | _herbau_a_
