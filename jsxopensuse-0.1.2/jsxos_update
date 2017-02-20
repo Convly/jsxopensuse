@@ -1,4 +1,4 @@
 #!/bin/sh
 
 nano ~/.jsxopensuse/runner.sh
-docker build -t jsxopensuse ~/.jsxopensuse
+sudo docker build --build-arg packages="`cat ~/.jsxopensuse/packages`" --tag=jsxopensuse ~/.jsxopensuse
