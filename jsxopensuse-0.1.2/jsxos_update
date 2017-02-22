@@ -1,6 +1,12 @@
 #!/bin/sh
 
-$EDITOR ~/.jsxopensuse/runner.sh                                                                                                                                                                     
-id_container=`sudo docker inspect jsxopensuse | grep "Id" | cut -c 23-34`                                                                                                                            
-sudo docker build --build-arg packages="`cat ~/.jsxopensuse/packages`" --tag=jsxopensuse ~/.jsxopensuse
-sudo docker rmi -f $id_container
+$EDITOR ~/.jsxopensuse/runner.sh
+if [ $(expr `date +%s` - `stat -c %Y ~/.jsxopensuse/runner.sh`) -le 2 ]
+then
+    id_container=`sudo docker inspect jsxopensuse | grep "Id" | cut -c 23-34`                                                                                              #                             
+    sudo docker build --build-arg packages="`cat ~/.jsxopensuse/packages`" --tag=jsxopensuse ~/.jsxopensuse
+    sudo docker rmi -f $id_container
+else
+    echo "No change to be saved"
+fi
+
