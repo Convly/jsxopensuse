@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nano ~/.jsxopensuse/packages
+$EDITOR ~/.jsxopensuse/packages
 if [[ "$@" == "--update" ]]
 then
 	sudo docker build --no-cache=true --build-arg packages="`cat ~/.jsxopensuse/packages`" --tag=jsxopensuse ~/.jsxopensuse/
